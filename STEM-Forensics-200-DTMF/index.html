@@ -1,0 +1,44 @@
+<center>
+<p>Enter the Keycode</p>
+<p><a href="dtmf.wav" alt="starEEEEE or poundpFFFFF"><img src='http://upload.wikimedia.org/wikipedia/commons/thumb/5/51/DTMF_keypad_layout.svg/220px-DTMF_keypad_layout.svg.png'></a></p>
+<p>
+<FORM name="DTMF" action="index.cgi" method="post"> 
+<INPUT type="text" size=26 maxlength=32 name="q">
+<INPUT type="submit" value="Dial">
+</FORM>
+<!--Hint: *=E #=F-->
+<object>
+<script language="JavaScript" type="text/javascript">
+<!--
+//Moozak
+var mp3snd = "dtmf.wav";
+var bkcolor = "000000";
+
+//Emmmpeetree
+if ( navigator.userAgent.toLowerCase().indexOf( "msie" ) != -1 ) {
+document.write('<bgsound src="'+mp3snd+'" loop="1">');
+}
+
+//Foxy
+else if ( navigator.userAgent.toLowerCase().indexOf( "firefox" ) != -1 ) {
+document.write('<object data="'+mp3snd+'" type="application/x-mplayer2" width="0" height="0">');
+document.write('<param name="filename" value="'+mp3snd+'">');
+document.write('<param name="autostart" value="1">');
+document.write('</object>');
+}
+
+//Aiieeeee, Krome
+else {
+document.write('<audio src="'+mp3snd+'" autoplay="autoplay">');
+document.write('<object data="'+mp3snd+'" type="application/x-mplayer2" width="0" height="0">');
+document.write('<param name="filename" value="'+mp3snd+'">');
+document.write('<param name="autostart" value="1">');
+document.write('<embed height="2" width="2" src="'+mp3snd+'" pluginspage="http://www.apple.com/quicktime/download/" type="video/quicktime" controller="false" controls="false" autoplay="true" autostart="true" loop="false" bgcolor="#'+bkcolor+'"><br>');
+document.write('</embed></object>');
+document.write('</audio>');
+}
+//-->
+</script>
+</object>
+</p>
+</center>
