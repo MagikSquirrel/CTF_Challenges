@@ -1,6 +1,4 @@
 # CTF_Challenges
-A cyber security challenge that uses forensic analysis of image files using the "string" function in either Windows or Unix.
-
 STEM-Forensics-100-TMNT: Teenage Mutant Ninja Turtles Security challenge. The user has to use strings to read hidden ASCII in various images. Then submit those to the web application to get the flag.
 
 STEM-Forensics-200-DTMF: Dual-tone multi-frequency signaling (phone number noise). The user has to listen to a tone when translates to hex values. This is the flag.
